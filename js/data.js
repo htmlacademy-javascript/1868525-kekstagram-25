@@ -47,3 +47,5 @@ const createPost = () => ({
   comments: Array.from({length: getRandomPositiveInteger(1,7)},createComment ),
 });
 export {createPost};
+
+

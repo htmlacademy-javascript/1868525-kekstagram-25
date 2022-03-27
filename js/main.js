@@ -17,7 +17,6 @@ const getImageElementFromTemplate = ()=> {
   return element.cloneNode(true);
 };
 
-
 const getPictureListContainer = () => {
   const element = document.querySelector(IMAGES_CONTAINER_SELECTOR);
   if(!element){
@@ -26,13 +25,6 @@ const getPictureListContainer = () => {
   return element;
 };
 
-const posts = Array.from({length:10}, createPost);
+const posts = Array.from({length:12}, createPost);
 
-render(
-  getPictureListContainer(),
-  wrapElements(
-    renderPhotoList(
-      getImageElementFromTemplate(),
-      posts),
-  ),
-);
+render(getPictureListContainer(), wrapElements(renderPhotoList(getImageElementFromTemplate(),posts)));
