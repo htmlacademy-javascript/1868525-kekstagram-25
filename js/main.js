@@ -1,4 +1,5 @@
 import {createPost} from './data.js';
+import { setFormHandlers } from './form.js';
 import { render, renderPhotoList, wrapElements } from './render.js';
 const IMAGE_TEMPLATE_ID = '#picture';
 const IMAGE_ITEM_SELECTOR = '.picture';
@@ -36,3 +37,5 @@ render(
       posts),
   ),
 );
+
+setFormHandlers();

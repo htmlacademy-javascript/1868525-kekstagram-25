@@ -1,3 +1,5 @@
+import { renderBigPicture } from './full-photo.js';
+
 const PICTURE_IMG = '.picture__img';
 const PICTURE_LIKES = '.picture__likes';
 const PICTURE_COMMENTS = '.picture__comments';
@@ -12,6 +14,9 @@ const initPhotoElement = (photoElement, photo)=>{
   photoElement.querySelector(PICTURE_IMG).src = url;
   photoElement.querySelector(PICTURE_LIKES).textContent = likes;
   photoElement.querySelector(PICTURE_COMMENTS).textContent = comments.length;
+  photoElement.addEventListener('click', () => {
+    renderBigPicture(photo);
+  });
   return photoElement;
 };
 
